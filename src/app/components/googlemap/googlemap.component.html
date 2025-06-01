@@ -1,0 +1,30 @@
+
+<div class="map-container">
+
+    <div class="map-controller">
+
+      <div class="map-controller-item">
+        <controller-layer-management [layers]="geojsonLayers" (layerVisibilityChange)="toggleLayerVisibility($event)"
+          (toggleLabel)="createPolygonLabelLayers($event)" (boundaryLayer)="fillPolygon($event)" />
+      </div>
+
+      <div class="map-controller-item">
+        <base-map-selector [activeMapTypeId]="activeMapTypeId"
+          (mapTypeSelected)="baseMapSelected($event)"></base-map-selector>
+      </div>
+
+
+    </div>
+
+  <google-map height="100%" width="100%" [mapId]="mapId"
+   [zoom]="zoom" [center]="center" [options]="mapOptions"
+    (mapInitialized)="mapInitialized($event)">
+    <map-info-window #infoWindow></map-info-window>
+    <map-marker></map-marker>
+  </google-map>
+
+
+</div>
+
+
+

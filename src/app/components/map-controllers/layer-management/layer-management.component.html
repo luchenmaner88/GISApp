@@ -1,0 +1,52 @@
+<button mat-fab (click)="toggle()" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin"
+  [class]="{'active':isOpen}">
+  <mat-icon>
+    art_track
+  </mat-icon>
+</button>
+
+<!-- This template displays the overlay content and is connected to the button -->
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen"
+  (detach)="isOpen = false">
+  <ul class="layer-control">
+    <li>
+      <div class="header">LAYERS</div>
+      <div class="close-button" (click)="isOpen = false"><mat-icon>close</mat-icon></div>
+      <!-- <button (click)="isOpen = false"><mat-icon>close</mat-icon></button> -->
+    </li>
+    @for (layer of layers; track $index) {
+    <li class="layer-control-item">
+      <div class="layer-checkbox">
+        <mat-checkbox [checked]="layer.visible" (change)="toggleCheckbox($index,$event.checked)"
+          class="layer-checkbox-label">
+          {{layer.id}}
+        </mat-checkbox>
+      </div>
+      <div class="layer-tool" [style.visibility]="layer.visible ? 'visible' : 'hidden'">
+
+          <app-symbology [layer]="layer"></app-symbology>
+
+
+        <mat-icon matTooltip="zoom to layer center" matTooltipPosition="below">my_location</mat-icon>
+
+        <mat-icon matTooltip="layer opacity">opacity</mat-icon>
+
+        @if(layer.geometryType==="polygon"){
+
+        <mat-icon matTooltip="label the feature" matTooltipPosition="below" [ngClass]="{'on':layer.labelOn===true }"
+          (click)="labelLayer($index, layer.labelOn)">label_outline</mat-icon>
+
+        <mat-icon matTooltip="boundary only view" matTooltipPosition="below"
+          [ngClass]="{'on': layer.fillPolygon === true}"
+          (click)="fillPolygon($index, layer.fillPolygon)">format_color_fill</mat-icon>
+        }
+
+      </div>
+
+
+    </li>
+    }
+
+
+  </ul>
+</ng-template>

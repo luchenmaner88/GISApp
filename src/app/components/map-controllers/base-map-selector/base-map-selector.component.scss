@@ -1,0 +1,129 @@
+
+@import '../variables.scss';
+
+button{
+  background: #ffffff;
+  border: #ffffff86;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 1rem;
+}
+
+button:hover {
+  background-color: #d1c5e2;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 30
+}
+
+button.active{
+  background-color: $active-map-controller-color;
+  border-radius: 5px;
+
+}
+
+
+.base-layer-control {
+  border: solid 1px #a5a2a2;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+  background: #fff;
+  text-align: left;
+  padding: 10px;
+  margin: 0;
+  z-index: 1;
+  font-size: 0.6rem;
+
+}
+
+
+
+.base-layer-control> .base-layer-control-header
+{
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  border-bottom: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #a5a2a2;
+  position: relative;
+
+}
+
+
+.base-layer-control> .base-layer-control-header > div.title{
+ font-weight: 600;
+ line-height: 1.5rem;
+ font-size: 0.8rem;
+ color: $layer-control-text-color;
+}
+.base-layer-control > .base-layer-control-header > .close-button{
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+
+}
+
+.base-layer-control > .base-layer-control-header > .close-button:hover{
+ cursor: pointer;
+}
+
+.base-layer-control> .base-layer-icon-container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* Two rows of equal height */
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  margin-top: 0.5rem;
+
+}
+
+.base-layer-control> .base-layer-icon-container> .base-layer-icon-group
+{
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+   .base-layer-button{
+      width: 4rem;
+      height: 4rem;
+
+
+      button{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.5rem 0.5rem;
+        border: #ebf3de 0.1rem solid;
+        overflow: hidden; /* Ensure image doesn't overflow rounded corners */
+        background-repeat: no-repeat; /* Ensure image doesn't repeat */
+      }
+
+      button.active-basemap-icon{
+       outline: 0.2rem ridge #00dddd9f;
+        border-radius: 0.3rem;
+
+      }
+
+   }
+}
+
+
+
+
+

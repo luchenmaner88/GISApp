@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "SchoolSites",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "POLLPLACE": "Celina ES", "ADDRESS": "550 S Utah St", "CITY": "Celina", "STATE": "TX", "ZIP": "75009", "Type": "ES", "Status": "CISD ES - Existing" }, "geometry": { "type": "Point", "coordinates": [ -96.791613374629563, 33.31782074553216 ] } },
+{ "type": "Feature", "properties": { "POLLPLACE": "Celina HS", "ADDRESS": "3455 N Preston Rd", "CITY": "Celina", "STATE": "TX", "ZIP": "75009", "Type": "HS", "Status": "CISD HS - Existing" }, "geometry": { "type": "Point", "coordinates": [ -96.764547408307706, 33.366461823169388 ] } },
+{ "type": "Feature", "properties": { "POLLPLACE": "Donny O'Dell ES", "ADDRESS": "750 Punk Carter Pkwy", "CITY": "Celina", "STATE": "TX", "ZIP": "75009", "Type": "ES", "Status": "CISD ES - Existing" }, "geometry": { "type": "Point", "coordinates": [ -96.773329721042074, 33.284968090647034 ] } },
+{ "type": "Feature", "properties": { "POLLPLACE": "Moore MS", "ADDRESS": "300 E GA Moore Pkwy", "CITY": "Celina", "STATE": "TX", "ZIP": "75009", "Type": "MS", "Status": "CISD MS - Existing" }, "geometry": { "type": "Point", "coordinates": [ -96.779282321841265, 33.359234366101994 ] } },
+{ "type": "Feature", "properties": { "POLLPLACE": "Martin ES", "ADDRESS": "2905 Lousiana Dr", "CITY": "Celina", "STATE": "TX", "ZIP": "75009", "Type": "ES", "Status": "CISD ES - Existing" }, "geometry": { "type": "Point", "coordinates": [ -96.781277785811099, 33.359303113831047 ] } },
+{ "type": "Feature", "properties": { "POLLPLACE": "Celina Primary School", "ADDRESS": "507 E. Malone St", "CITY": "Celina", "STATE": "TX", "ZIP": "75009", "Type": "ES", "Status": "CISD ES - Existing" }, "geometry": { "type": "Point", "coordinates": [ -96.778922398978608, 33.326481982155393 ] } }
+]
+}

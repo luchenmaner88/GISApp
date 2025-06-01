@@ -1,0 +1,33 @@
+<div class="layer-symbol">
+@if(layer().geometryType==="polygon"){
+<div [ngStyle]="{
+                            'background-color': layer().style.fillColor,
+                            'border-color': layer().style.strokeColor,
+                            'border-width': layer().style.strokeWidth + 'px',
+                            'border-style': 'solid',
+                            'width':'100%',
+                            'height':'100%'
+                              }">
+
+</div>
+}
+
+@if(layer().geometryType ==="point"){
+<div style="display: flex; align-items: center;">
+  <img [src]="layer().style.icon.url" alt="icon" style="width:1.5rem;height: 1.5rem;" />
+</div>
+
+}
+@if(layer().geometryType ==="line"){
+
+<div [ngStyle]="{
+                            'width': '100%',
+                            'height': layer().style.strokeWidth + 'px',
+                              'border-radius': '2px',
+                              'border-style': 'solid',
+                              'border-color': layer().style.strokeColor,
+                            'background-color': layer().style.strokeColor,
+                              }"></div>
+
+}
+</div>
